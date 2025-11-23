@@ -1,0 +1,165 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(0,20,40,0.7), rgba(0,10,20,0.85)),
+                url('amine.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Network canvas */
+#network {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Header and title animation */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 1;
+}
+
+.animated-title {
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideFade 2s forwards;
+}
+
+@keyframes slideFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing animations */
+.typing, .typing-quote {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ff6600;
+    font-size: 1.5rem;
+    animation: typing 4s steps(50), blink .5s step-end infinite alternate;
+}
+
+@keyframes typing { from { width: 0 } }
+@keyframes blink { 50% { border-color: transparent } }
+
+/* Quote section */
+.quote-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(198, 43, 74, 0.33);
+    margin-bottom: 40px;
+}
+
+.quote-section blockquote {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 0 0 15px #141313, 0 0 30px #ff6600;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a { color: #ff6600; text-decoration: none; font-weight: bold; }
+
+/* Creative boxes */
+.creative-box {
+    padding: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px #ff6600;
+    border-radius: 10px;
+    margin: 20px 0;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Gallery */
+.gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.8);
+    margin-top: 40px;
+}
+
+footer p span { color: #ff6600; font-weight: bold; }
+.article-img {
+    width: 500px;   /* sets image width to 300px */
+    height: auto;   /* preserves aspect ratio */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,102,0,0.6);
+}
+
+.linkedin-top {
+    position: absolute;
+    top: 20px;       /* distance from top */
+    right: 20px;     /* distance from right */
+    background-color: #0A66C2;  /* LinkedIn blue */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    z-index: 10;      /* ensure it appears above other elements */
+}
+
+.linkedin-top:hover {
+    background-color: #004182;  /* darker blue on hover */
+}
+.instagram-top-left {
+    position: absolute;
+    top: 20px;              /* distance from top */
+    left: 20px;             /* distance from left */
+    background-color: #E1306C; /* Instagram pink */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+    z-index: 100;           /* above all content */
+}
+
+.instagram-top-left:hover {
+    background-color: #C13584; /* darker pink on hover */
+}
+.custom-img {
+    width: 600px;             /* sets image width to 300px */
+    height: auto;             /* preserves aspect ratio */
+    display: block;           /* centers the image as block */
+    margin: 20px auto;        /* top/bottom margin + centered horizontally */
+    border-radius: 10px;      /* rounded corners */
+    box-shadow: 0 0 15px rgba(255,102,0,0.6); /* orange glow effect */
+}
